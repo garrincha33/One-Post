@@ -12,6 +12,10 @@
 		1B0B92181DD4EA9600C5E93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B92161DD4EA9600C5E93E /* Main.storyboard */; };
 		1B0B921A1DD4EA9600C5E93E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B92191DD4EA9600C5E93E /* Assets.xcassets */; };
 		1B0B921D1DD4EA9600C5E93E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B921B1DD4EA9600C5E93E /* LaunchScreen.storyboard */; };
+		1B0B92251DD4EAC800C5E93E /* ContrailOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B92241DD4EAC800C5E93E /* ContrailOne-Regular.ttf */; };
+		1B0B92271DD4EAE300C5E93E /* Exo2-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B92261DD4EAE300C5E93E /* Exo2-Thin.ttf */; };
+		1B0B92291DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B92281DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf */; };
+		1B0B922B1DD4EAF700C5E93E /* Exo2-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B922A1DD4EAF700C5E93E /* Exo2-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		1B0B92191DD4EA9600C5E93E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B0B921C1DD4EA9600C5E93E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B0B921E1DD4EA9600C5E93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B0B92241DD4EAC800C5E93E /* ContrailOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ContrailOne-Regular.ttf"; sourceTree = "<group>"; };
+		1B0B92261DD4EAE300C5E93E /* Exo2-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Thin.ttf"; sourceTree = "<group>"; };
+		1B0B92281DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-MediumItalic.ttf"; sourceTree = "<group>"; };
+		1B0B922A1DD4EAF700C5E93E /* Exo2-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,10 @@
 		1B0B92111DD4EA9600C5E93E /* OnePost */ = {
 			isa = PBXGroup;
 			children = (
+				1B0B92241DD4EAC800C5E93E /* ContrailOne-Regular.ttf */,
+				1B0B92261DD4EAE300C5E93E /* Exo2-Thin.ttf */,
+				1B0B922A1DD4EAF700C5E93E /* Exo2-Light.ttf */,
+				1B0B92281DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf */,
 				1B0B92121DD4EA9600C5E93E /* AppDelegate.swift */,
 				1B0B92141DD4EA9600C5E93E /* ViewController.swift */,
 				1B0B92161DD4EA9600C5E93E /* Main.storyboard */,
@@ -124,7 +136,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0B92271DD4EAE300C5E93E /* Exo2-Thin.ttf in Resources */,
+				1B0B922B1DD4EAF700C5E93E /* Exo2-Light.ttf in Resources */,
+				1B0B92251DD4EAC800C5E93E /* ContrailOne-Regular.ttf in Resources */,
 				1B0B921D1DD4EA9600C5E93E /* LaunchScreen.storyboard in Resources */,
+				1B0B92291DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf in Resources */,
 				1B0B921A1DD4EA9600C5E93E /* Assets.xcassets in Resources */,
 				1B0B92181DD4EA9600C5E93E /* Main.storyboard in Resources */,
 			);
