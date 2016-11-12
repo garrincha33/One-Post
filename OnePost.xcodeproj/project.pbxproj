@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B0B92131DD4EA9600C5E93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B92121DD4EA9600C5E93E /* AppDelegate.swift */; };
-		1B0B92151DD4EA9600C5E93E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B92141DD4EA9600C5E93E /* ViewController.swift */; };
+		1B0B92151DD4EA9600C5E93E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B92141DD4EA9600C5E93E /* MainVC.swift */; };
 		1B0B92181DD4EA9600C5E93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B92161DD4EA9600C5E93E /* Main.storyboard */; };
 		1B0B921A1DD4EA9600C5E93E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B92191DD4EA9600C5E93E /* Assets.xcassets */; };
 		1B0B921D1DD4EA9600C5E93E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B921B1DD4EA9600C5E93E /* LaunchScreen.storyboard */; };
@@ -23,15 +23,15 @@
 /* Begin PBXFileReference section */
 		1B0B920F1DD4EA9600C5E93E /* OnePost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnePost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0B92121DD4EA9600C5E93E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1B0B92141DD4EA9600C5E93E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1B0B92141DD4EA9600C5E93E /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		1B0B92171DD4EA9600C5E93E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B0B92191DD4EA9600C5E93E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B0B921C1DD4EA9600C5E93E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B0B921E1DD4EA9600C5E93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B0B92241DD4EAC800C5E93E /* ContrailOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ContrailOne-Regular.ttf"; sourceTree = "<group>"; };
-		1B0B92261DD4EAE300C5E93E /* Exo2-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Thin.ttf"; sourceTree = "<group>"; };
-		1B0B92281DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-MediumItalic.ttf"; sourceTree = "<group>"; };
-		1B0B922A1DD4EAF700C5E93E /* Exo2-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Light.ttf"; sourceTree = "<group>"; };
+		1B0B92241DD4EAC800C5E93E /* ContrailOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ContrailOne-Regular.ttf"; path = "OnePost/ContrailOne-Regular.ttf"; sourceTree = "<group>"; };
+		1B0B92261DD4EAE300C5E93E /* Exo2-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Thin.ttf"; path = "OnePost/Exo2-Thin.ttf"; sourceTree = "<group>"; };
+		1B0B92281DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-MediumItalic.ttf"; path = "OnePost/Exo2-MediumItalic.ttf"; sourceTree = "<group>"; };
+		1B0B922A1DD4EAF700C5E93E /* Exo2-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Light.ttf"; path = "OnePost/Exo2-Light.ttf"; sourceTree = "<group>"; };
 		1B72F7571DD7ADBF0020E739 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		219A697702848073B9FF8C82 /* Pods-OnePost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnePost.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnePost/Pods-OnePost.release.xcconfig"; sourceTree = "<group>"; };
 		D531DC1FA0698757FEDB593F /* Pods_OnePost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnePost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,12 +71,11 @@
 		1B0B92111DD4EA9600C5E93E /* OnePost */ = {
 			isa = PBXGroup;
 			children = (
-				1B0B92241DD4EAC800C5E93E /* ContrailOne-Regular.ttf */,
-				1B0B92261DD4EAE300C5E93E /* Exo2-Thin.ttf */,
-				1B0B922A1DD4EAF700C5E93E /* Exo2-Light.ttf */,
-				1B0B92281DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf */,
+				1B72F75B1DD7BD460020E739 /* Controller */,
+				1B72F7591DD7BD3A0020E739 /* Model */,
+				1B72F75A1DD7BD410020E739 /* View */,
+				1B72F75C1DD7BD590020E739 /* Fonts */,
 				1B0B92121DD4EA9600C5E93E /* AppDelegate.swift */,
-				1B0B92141DD4EA9600C5E93E /* ViewController.swift */,
 				1B0B92161DD4EA9600C5E93E /* Main.storyboard */,
 				1B72F7571DD7ADBF0020E739 /* GoogleService-Info.plist */,
 				1B0B92191DD4EA9600C5E93E /* Assets.xcassets */,
@@ -84,6 +83,40 @@
 				1B0B921E1DD4EA9600C5E93E /* Info.plist */,
 			);
 			path = OnePost;
+			sourceTree = "<group>";
+		};
+		1B72F7591DD7BD3A0020E739 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1B72F75A1DD7BD410020E739 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1B72F75B1DD7BD460020E739 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B0B92141DD4EA9600C5E93E /* MainVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1B72F75C1DD7BD590020E739 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1B0B92241DD4EAC800C5E93E /* ContrailOne-Regular.ttf */,
+				1B0B92261DD4EAE300C5E93E /* Exo2-Thin.ttf */,
+				1B0B922A1DD4EAF700C5E93E /* Exo2-Light.ttf */,
+				1B0B92281DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf */,
+			);
+			name = Fonts;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B3DF2FC4946E210E62C7D7B9 /* Pods */ = {
@@ -232,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B0B92151DD4EA9600C5E93E /* ViewController.swift in Sources */,
+				1B0B92151DD4EA9600C5E93E /* MainVC.swift in Sources */,
 				1B0B92131DD4EA9600C5E93E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
