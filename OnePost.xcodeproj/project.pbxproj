@@ -16,6 +16,8 @@
 		1B0B92271DD4EAE300C5E93E /* Exo2-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B92261DD4EAE300C5E93E /* Exo2-Thin.ttf */; };
 		1B0B92291DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B92281DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf */; };
 		1B0B922B1DD4EAF700C5E93E /* Exo2-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B922A1DD4EAF700C5E93E /* Exo2-Light.ttf */; };
+		1B72F7581DD7ADBF0020E739 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B72F7571DD7ADBF0020E739 /* GoogleService-Info.plist */; };
+		DB5B89BD04EA3E5DEFE0BB7C /* Pods_OnePost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D531DC1FA0698757FEDB593F /* Pods_OnePost.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,10 @@
 		1B0B92261DD4EAE300C5E93E /* Exo2-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Thin.ttf"; sourceTree = "<group>"; };
 		1B0B92281DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-MediumItalic.ttf"; sourceTree = "<group>"; };
 		1B0B922A1DD4EAF700C5E93E /* Exo2-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Light.ttf"; sourceTree = "<group>"; };
+		1B72F7571DD7ADBF0020E739 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		219A697702848073B9FF8C82 /* Pods-OnePost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnePost.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnePost/Pods-OnePost.release.xcconfig"; sourceTree = "<group>"; };
+		D531DC1FA0698757FEDB593F /* Pods_OnePost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnePost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF095D0EF7FD95CE946ABEA9 /* Pods-OnePost.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnePost.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnePost/Pods-OnePost.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5B89BD04EA3E5DEFE0BB7C /* Pods_OnePost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +55,8 @@
 			children = (
 				1B0B92111DD4EA9600C5E93E /* OnePost */,
 				1B0B92101DD4EA9600C5E93E /* Products */,
+				B3DF2FC4946E210E62C7D7B9 /* Pods */,
+				DC6E7BDB66E99CE881269014 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,11 +78,29 @@
 				1B0B92121DD4EA9600C5E93E /* AppDelegate.swift */,
 				1B0B92141DD4EA9600C5E93E /* ViewController.swift */,
 				1B0B92161DD4EA9600C5E93E /* Main.storyboard */,
+				1B72F7571DD7ADBF0020E739 /* GoogleService-Info.plist */,
 				1B0B92191DD4EA9600C5E93E /* Assets.xcassets */,
 				1B0B921B1DD4EA9600C5E93E /* LaunchScreen.storyboard */,
 				1B0B921E1DD4EA9600C5E93E /* Info.plist */,
 			);
 			path = OnePost;
+			sourceTree = "<group>";
+		};
+		B3DF2FC4946E210E62C7D7B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF095D0EF7FD95CE946ABEA9 /* Pods-OnePost.debug.xcconfig */,
+				219A697702848073B9FF8C82 /* Pods-OnePost.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC6E7BDB66E99CE881269014 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D531DC1FA0698757FEDB593F /* Pods_OnePost.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B0B92211DD4EA9600C5E93E /* Build configuration list for PBXNativeTarget "OnePost" */;
 			buildPhases = (
+				623751038B3E17E27A9C19D2 /* [CP] Check Pods Manifest.lock */,
 				1B0B920B1DD4EA9600C5E93E /* Sources */,
 				1B0B920C1DD4EA9600C5E93E /* Frameworks */,
 				1B0B920D1DD4EA9600C5E93E /* Resources */,
+				F16AFC9279419FB5DF535789 /* [CP] Embed Pods Frameworks */,
+				6C49832F8EAD4FCDA36BC280 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,10 +173,59 @@
 				1B0B92291DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf in Resources */,
 				1B0B921A1DD4EA9600C5E93E /* Assets.xcassets in Resources */,
 				1B0B92181DD4EA9600C5E93E /* Main.storyboard in Resources */,
+				1B72F7581DD7ADBF0020E739 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		623751038B3E17E27A9C19D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6C49832F8EAD4FCDA36BC280 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnePost/Pods-OnePost-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F16AFC9279419FB5DF535789 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnePost/Pods-OnePost-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B0B920B1DD4EA9600C5E93E /* Sources */ = {
@@ -275,6 +354,7 @@
 		};
 		1B0B92221DD4EA9600C5E93E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF095D0EF7FD95CE946ABEA9 /* Pods-OnePost.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UMQAGMF379;
@@ -288,6 +368,7 @@
 		};
 		1B0B92231DD4EA9600C5E93E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 219A697702848073B9FF8C82 /* Pods-OnePost.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UMQAGMF379;
@@ -318,6 +399,7 @@
 				1B0B92231DD4EA9600C5E93E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
