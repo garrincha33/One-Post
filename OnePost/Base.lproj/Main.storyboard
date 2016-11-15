@@ -48,7 +48,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lA2-a5-nfr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lA2-a5-nfr">
                                 <rect key="frame" x="53" y="234" width="270" height="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Exo2-Light" family="Exo 2" pointSize="17"/>
@@ -56,9 +56,9 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GxL-Qp-zRm">
                                 <rect key="frame" x="49" y="287" width="278" height="21"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Exo2-Light" family="Exo 2" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwK-R7-tJu" userLabel="usernameUnderline">
                                 <rect key="frame" x="53" y="265" width="270" height="1"/>
@@ -164,11 +164,40 @@
                     <connections>
                         <outlet property="passwwordLoginTxtField" destination="GxL-Qp-zRm" id="Wgh-lZ-sUc"/>
                         <outlet property="usernameLoginTxtField" destination="lA2-a5-nfr" id="uis-jb-IXV"/>
+                        <segue destination="URn-FF-pW7" kind="show" identifier="goToFeed" id="Lbm-oN-MgL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-428" y="-65"/>
+            <point key="canvasLocation" x="-1140" y="-74"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="Ifl-NQ-Lzc">
+            <objects>
+                <viewController id="URn-FF-pW7" customClass="FeedVC" customModule="OnePost" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IWM-32-2iB"/>
+                        <viewControllerLayoutGuide type="bottom" id="dwl-SL-3oM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8mq-ho-1EQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAG-wX-QfD">
+                                <rect key="frame" x="109" y="300" width="156" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutBtnPressed:" destination="URn-FF-pW7" eventType="touchUpInside" id="mfM-ey-ki2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88235294119999996" green="0.74509803919999995" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTa-jF-a5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-170.40000000000001" y="-74.212893553223395"/>
         </scene>
     </scenes>
     <resources>

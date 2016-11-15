@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftKeychainWrapper
 
 class MainVC: UIViewController {
     
@@ -18,8 +19,17 @@ class MainVC: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-  
-      
+     
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if let _ = KeychainWrapper.defaultKeychainWrapper().stringForKey(KEY_UID) {
+            
+            print("ID Found in KeyChain")
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+            
+        }
     }
     
     
@@ -34,6 +44,13 @@ class MainVC: UIViewController {
             } else {
                 
                 print("Rich: Successfully authenticated with firebase")
+                
+                if let user =  user {
+                    
+                    self.completeSignIn(id: user.uid)
+                    
+                }
+                
                 
             }
             
@@ -55,6 +72,8 @@ class MainVC: UIViewController {
             return
         }
         
+       
+   
         FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
             
             if error != nil {
@@ -64,11 +83,23 @@ class MainVC: UIViewController {
             } else {
                 
                 print("Rich: Successfully authenticated with firebase ")
-                
+                if let user =  user {
+                    
+                    self.completeSignIn(id: user.uid)
+                    
+                }
             }
 
         })
 
+    }
+    
+    func completeSignIn(id: String) {
+        
+        let keychainResult = KeychainWrapper.defaultKeychainWrapper().setString(id, forKey: KEY_UID)
+        print("Rich: Data Saved to Keychain \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
+        
     }
 
 }
