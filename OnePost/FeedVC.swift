@@ -22,6 +22,7 @@ class FeedVC: UIViewController {
         
         let keyChainResult = KeychainWrapper.defaultKeychainWrapper().removeObjectForKey(KEY_UID)
         print("Rich: ID Removed From Keychain \(keyChainResult)")
+        try! FIRAuth.auth()?.signOut()
         dismiss(animated: true, completion: nil)
  
     }
