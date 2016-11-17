@@ -19,6 +19,9 @@ class MainVC: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hideKeyboard()
+       
      
     }
     
@@ -75,25 +78,44 @@ class MainVC: UIViewController {
         
        
    
-        FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
+        FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
             
-            if error != nil {
+            if error == nil {
                 
-                print("Rich: unable to auth with firebase")
+                print("Rich: EMAIL USER AUTHENTICATED\(error.debugDescription)")
                 
-            } else {
-                
-                print("Rich: Successfully authenticated with firebase ")
-                if let user =  user {
+                if let user = user {
                     
-                    let userData = ["provider": user.providerID]
+                    let userData = ["provider" : user.providerID]
                     self.completeSignIn(id: user.uid, userData: userData)
                     
+                } else {
+                    
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                        
+                        if error != nil {
+                            
+                            print("Rich: unable to authenticate with firebase \(error.debugDescription)")
+                            
+                        } else {
+                            
+                            print("RICH: successfully authenticated and added user to firebase....")
+                            
+                            if let user = user {
+                                
+                                let userData = ["provider" : user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
+                                
+                            }
+                        }
+ 
+                    })
+                    
                 }
+
             }
-
         })
-
+        
     }
     
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
@@ -105,6 +127,23 @@ class MainVC: UIViewController {
         performSegue(withIdentifier: "goToFeed", sender: nil)
         
     }
+    
+    func hideKeyboard() {
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainVC.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+    
+    func dismissKeyboard() {
+        
+        view.endEditing(true)
+        
+    }
+        
+    
 
 }
 

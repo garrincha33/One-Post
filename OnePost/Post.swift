@@ -79,6 +79,12 @@ class Post {
             
         }
         
+        if let comments = postData["comments"] as? String {
+            
+            self._comments = comments
+            
+        }
+        
         
     }
     

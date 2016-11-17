@@ -15,8 +15,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()
-    
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +30,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                 
                 for snaps in snapshot {
                     
-                    print("SNAP: \(snaps)")
+                    print("SNAP----: \(snaps)")
                     
                     if let postDict = snaps.value as? Dictionary<String, AnyObject> {
                         
