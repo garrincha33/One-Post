@@ -186,12 +186,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7h-4j-ito">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compose" translatesAutoresizingMaskIntoConstraints="NO" id="55F-Ha-ClO">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compose" translatesAutoresizingMaskIntoConstraints="NO" id="55F-Ha-ClO">
                                         <rect key="frame" x="366" y="17" width="40" height="40"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="Epz-Ew-71Q"/>
                                             <constraint firstAttribute="height" constant="40" id="M3Q-Dq-QPE"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="6TT-4e-5k5" appends="YES" id="DP7-rN-63Z"/>
+                                        </connections>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="aqJ-7n-rpj">
                                         <rect key="frame" x="8" y="17" width="40" height="40"/>
@@ -201,7 +205,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB8-L2-ODZ">
-                                        <rect key="frame" x="160.66666666666666" y="18.666666666666664" width="93" height="27.999999999999993"/>
+                                        <rect key="frame" x="161" y="19" width="93" height="28"/>
                                         <fontDescription key="fontDescription" name="Exo2-Light" family="Exo 2" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -247,7 +251,7 @@
                                 <rect key="frame" x="20" y="73" width="374" height="615"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="359" id="Qo9-Fe-L7R" customClass="PostCell" customModule="OnePost" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="postCell" rowHeight="359" id="Qo9-Fe-L7R" customClass="PostCell" customModule="OnePost" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="359"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qo9-Fe-L7R" id="aNh-sX-Pvi">
@@ -257,7 +261,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZf-QL-8Eq" userLabel="ShadowView">
                                                     <rect key="frame" x="8" y="8" width="358" height="343"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="DdD-Rj-zLi" userLabel="profileImg">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_3164" translatesAutoresizingMaskIntoConstraints="NO" id="DdD-Rj-zLi" userLabel="profileImg">
                                                             <rect key="frame" x="8" y="8" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="Ysp-j7-hsS"/>
@@ -401,13 +405,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTa-jF-a5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6TT-4e-5k5" userLabel="makePostGestureRecogniser"/>
             </objects>
             <point key="canvasLocation" x="-174.375" y="-78.16901408450704"/>
         </scene>
-        <!--View Controller-->
+        <!--Create PostVC-->
         <scene sceneID="F5V-0R-0lT">
             <objects>
-                <viewController id="lYd-3r-xYg" sceneMemberID="viewController">
+                <viewController id="lYd-3r-xYg" customClass="CreatePostVC" customModule="OnePost" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rNq-aX-362"/>
                         <viewControllerLayoutGuide type="bottom" id="91Y-YX-Txu"/>
@@ -449,7 +454,7 @@
                                     <constraint firstAttribute="height" constant="48" id="9Zf-aQ-Lob"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="4So-dl-3jW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_3164" translatesAutoresizingMaskIntoConstraints="NO" id="4So-dl-3jW">
                                 <rect key="frame" x="16" y="73" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="lrn-3y-wX9"/>
@@ -457,34 +462,67 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Whats on your mind?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FwE-va-1Cv">
-                                <rect key="frame" x="64" y="78" width="240" height="30"/>
+                                <rect key="frame" x="64" y="78" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1Ts-CI-tDf"/>
-                                    <constraint firstAttribute="width" constant="240" id="FrR-QM-i0r"/>
+                                    <constraint firstAttribute="width" constant="150" id="FrR-QM-i0r"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eY9-mY-6gQ">
+                                <rect key="frame" x="331" y="78" width="63" height="30"/>
+                                <color key="backgroundColor" red="0.56243173710000005" green="0.21262040630000001" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ZgY-2Q-bGH"/>
+                                    <constraint firstAttribute="width" constant="63" id="dqD-r6-fem"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Exo2-Light" family="Exo 2" pointSize="18"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postBtnPressed:" destination="lYd-3r-xYg" eventType="touchUpInside" id="23w-1e-03V"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="V0z-qv-rHO">
+                                <rect key="frame" x="142" y="146" width="129" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="OoY-P9-jri"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="V0z-qv-rHO" firstAttribute="top" secondItem="FwE-va-1Cv" secondAttribute="bottom" constant="38" id="BhA-lS-0j5"/>
                             <constraint firstItem="4So-dl-3jW" firstAttribute="leading" secondItem="Axf-89-fgc" secondAttribute="leading" constant="16" id="EHj-cx-s2g"/>
                             <constraint firstItem="ezW-Pr-Gw7" firstAttribute="leading" secondItem="Axf-89-fgc" secondAttribute="leading" id="Ian-yQ-wp4"/>
                             <constraint firstItem="4So-dl-3jW" firstAttribute="top" secondItem="ezW-Pr-Gw7" secondAttribute="bottom" constant="8" id="JAJ-ap-2Yo"/>
                             <constraint firstItem="FwE-va-1Cv" firstAttribute="top" secondItem="ezW-Pr-Gw7" secondAttribute="bottom" constant="13" id="Ocd-Dz-2rb"/>
                             <constraint firstItem="ezW-Pr-Gw7" firstAttribute="top" secondItem="Axf-89-fgc" secondAttribute="top" id="P38-P0-reZ"/>
                             <constraint firstAttribute="trailing" secondItem="sfx-Tt-2Br" secondAttribute="trailing" id="Rz4-lg-fJB"/>
+                            <constraint firstItem="V0z-qv-rHO" firstAttribute="leading" secondItem="Axf-89-fgc" secondAttribute="leading" constant="142" id="b2G-7a-dnY"/>
                             <constraint firstItem="91Y-YX-Txu" firstAttribute="top" secondItem="sfx-Tt-2Br" secondAttribute="bottom" id="bX2-KI-miz"/>
+                            <constraint firstItem="eY9-mY-6gQ" firstAttribute="top" secondItem="ezW-Pr-Gw7" secondAttribute="bottom" constant="13" id="e84-LP-ATB"/>
                             <constraint firstItem="FwE-va-1Cv" firstAttribute="leading" secondItem="4So-dl-3jW" secondAttribute="trailing" constant="8" id="gdU-vi-McC"/>
                             <constraint firstAttribute="trailing" secondItem="ezW-Pr-Gw7" secondAttribute="trailing" id="oFH-K5-PHF"/>
+                            <constraint firstItem="eY9-mY-6gQ" firstAttribute="trailing" secondItem="Axf-89-fgc" secondAttribute="trailingMargin" id="rPw-Ah-j5V"/>
                             <constraint firstItem="sfx-Tt-2Br" firstAttribute="leading" secondItem="Axf-89-fgc" secondAttribute="leading" id="u65-K4-Lsh"/>
+                            <constraint firstAttribute="trailing" secondItem="V0z-qv-rHO" secondAttribute="trailing" constant="143" id="y3v-Rh-QEz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addImg" destination="V0z-qv-rHO" id="I9h-1l-ZzT"/>
+                        <outlet property="cancelPost" destination="cbP-ZY-Ovh" id="vRE-uX-EtP"/>
+                        <outlet property="makePost" destination="FwE-va-1Cv" id="fcE-Bv-KGX"/>
+                        <outlet property="profileImg" destination="4So-dl-3jW" id="Lhp-kA-hLw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CkY-XN-Dhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="-75"/>
+            <point key="canvasLocation" x="866.39999999999998" y="-75.112443778110944"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tsM-OO-WuE">
@@ -506,6 +544,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="IMG_3164" width="960" height="1280"/>
         <image name="cancel" width="700" height="700"/>
         <image name="comments" width="700" height="700"/>
         <image name="compose" width="700" height="700"/>

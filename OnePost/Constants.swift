@@ -9,3 +9,4 @@
 import UIKit
 
 let KEY_UID = "uid"
+let POST_CELL = "postCell"

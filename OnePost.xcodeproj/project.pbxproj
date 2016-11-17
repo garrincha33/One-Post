@@ -21,6 +21,8 @@
 		1B7D4ABD1DDB8A5500695A3A /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D4ABC1DDB8A5500695A3A /* FeedVC.swift */; };
 		1B7D4ABF1DDD220D00695A3A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D4ABE1DDD220D00695A3A /* PostCell.swift */; };
 		1B7D4AC21DDE243200695A3A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D4AC11DDE243200695A3A /* DataService.swift */; };
+		1BF35A5D1DDE41FD00C721F5 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF35A5C1DDE41FD00C721F5 /* CreatePostVC.swift */; };
+		1BF35A5F1DDE477900C721F5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF35A5E1DDE477900C721F5 /* Post.swift */; };
 		DB5B89BD04EA3E5DEFE0BB7C /* Pods_OnePost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D531DC1FA0698757FEDB593F /* Pods_OnePost.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		1B7D4ABE1DDD220D00695A3A /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		1B7D4AC11DDE243200695A3A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		1BB5B44C1DDB78F300409015 /* OnePost.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnePost.entitlements; sourceTree = "<group>"; };
+		1BF35A5C1DDE41FD00C721F5 /* CreatePostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
+		1BF35A5E1DDE477900C721F5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		219A697702848073B9FF8C82 /* Pods-OnePost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnePost.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnePost/Pods-OnePost.release.xcconfig"; sourceTree = "<group>"; };
 		D531DC1FA0698757FEDB593F /* Pods_OnePost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnePost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF095D0EF7FD95CE946ABEA9 /* Pods-OnePost.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnePost.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnePost/Pods-OnePost.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 		1B72F7591DD7BD3A0020E739 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1BF35A5E1DDE477900C721F5 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			children = (
 				1B0B92141DD4EA9600C5E93E /* MainVC.swift */,
 				1B7D4ABC1DDB8A5500695A3A /* FeedVC.swift */,
+				1BF35A5C1DDE41FD00C721F5 /* CreatePostVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -302,7 +308,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B7D4ABD1DDB8A5500695A3A /* FeedVC.swift in Sources */,
+				1BF35A5D1DDE41FD00C721F5 /* CreatePostVC.swift in Sources */,
 				1B0B92151DD4EA9600C5E93E /* MainVC.swift in Sources */,
+				1BF35A5F1DDE477900C721F5 /* Post.swift in Sources */,
 				1B0B92131DD4EA9600C5E93E /* AppDelegate.swift in Sources */,
 				1B7D4AC21DDE243200695A3A /* DataService.swift in Sources */,
 				1B7D4ABB1DDB871F00695A3A /* Constants.swift in Sources */,
