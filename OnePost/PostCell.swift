@@ -19,6 +19,7 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var commentsImg: UIImageView!
     @IBOutlet weak var searchImg: UIImageView!
     @IBOutlet weak var makePostImg: UIImageView!
+    @IBOutlet weak var likesNumberLbl: UILabel!
     
 
     override func awakeFromNib() {

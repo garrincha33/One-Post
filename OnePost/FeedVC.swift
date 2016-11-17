@@ -20,8 +20,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        DataService.ds.REF_POSTS.observe(.value, with: {(snapshot) in
+            
+            print(snapshot.value)
 
-     
+        
+        })
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,6 +48,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
     
     
-    
+    @IBAction func logOutBtnPressed(_ sender: Any) {
+        
+       let keyChainResult = KeychainWrapper.defaultKeychainWrapper().removeObjectForKey(KEY_UID)
+        print("RICH: removed from keychain \(keyChainResult)")
+        try! FIRAuth.auth()?.signOut()
+        dismiss(animated: true, completion: nil)
+  
+    }
+
   
 }
