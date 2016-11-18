@@ -35,7 +35,7 @@ class PostCell: UITableViewCell {
         self.post = post
         self.caption.text = post.caption
         self.likesNumberLbl.text = "\(post.likes)"
-        //self.usernameLbl.text = post.username
+        self.usernameLbl.text = post.username
    
     }
 

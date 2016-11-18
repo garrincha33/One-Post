@@ -15,7 +15,7 @@ class Post {
     private var _likes: Int!
     private var _comments: String!
     private var _postKey: String!
-    //private var _username: String!
+    private var _username: String!
     
     
     var caption: String {
@@ -48,15 +48,21 @@ class Post {
         
     }
     
-//    var username: String {
-//        
-//        return _username
-//        
-//    }
+    var username: String {
+        
+        if _username == nil {
+            
+            _username = "no data"
+            
+        }
+        
+        return _username
+  
+    }
     
     init(caption: String, imageUrl: String, likes: Int, username: String) {
         
-        //self._username = username
+        self._username = username
         self._caption = caption
         self._imageUrl = imageUrl
         self._likes = likes
@@ -94,9 +100,5 @@ class Post {
         
         
     }
-    
-    
-    
-    
-    
+
 }
