@@ -36,31 +36,31 @@ class MainVC: UIViewController {
     }
     
     
-    func firebaseAuth(_ credential: FIRAuthCredential) {
-        
-        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
-            
-            if error != nil {
-                
-                print("Rich: unable to auth with firebase")
-                
-            } else {
-                
-                print("Rich: Successfully authenticated with firebase")
-                
-                if let user =  user {
-                    
-                    let userData = ["provider" : credential.provider]
-                    self.completeSignIn(id: user.uid, userData: userData)
-                    
-                }
-                
-                
-            }
-            
-        })
-        
-    }
+//    func firebaseAuth(_ credential: FIRAuthCredential) {
+//        
+//        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+//            
+//            if error != nil {
+//                
+//                print("Rich: unable to auth with firebase")
+//                
+//            } else {
+//                
+//                print("Rich: Successfully authenticated with firebase")
+//                
+//                if let user =  user {
+//                    
+//                    let userData = ["provider" : credential.provider]
+//                    self.completeSignIn(id: user.uid, userData: userData)
+//                    
+//                }
+//                
+//                
+//            }
+//            
+//        })
+//        
+//    }
     
   
     @IBAction func loginBtn(_ sender: AnyObject) {
@@ -75,9 +75,7 @@ class MainVC: UIViewController {
             print("The password field needs to be populated")
             return
         }
-        
-       
-   
+
         FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
             
             if error == nil {
@@ -89,7 +87,12 @@ class MainVC: UIViewController {
                     let userData = ["provider" : user.providerID]
                     self.completeSignIn(id: user.uid, userData: userData)
                     
-                } else {
+                }
+                
+                
+                else {
+                    
+                    print("did we get here")
                     
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         
@@ -125,6 +128,9 @@ class MainVC: UIViewController {
         let keychainResult = KeychainWrapper.defaultKeychainWrapper().setString(id, forKey: KEY_UID)
         print("Rich: Data Saved to Keychain \(keychainResult)")
         performSegue(withIdentifier: "goToFeed", sender: nil)
+        usernameLoginTxtField.text = ""
+        passwwordLoginTxtField.text = ""
+        
         
     }
     

@@ -387,6 +387,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="caption" destination="kPI-pc-7EB" id="mnU-K4-jzf"/>
                                             <outlet property="commentsImg" destination="W6S-ZJ-cHs" id="Ieh-Hg-Qan"/>
                                             <outlet property="likesImg" destination="mTZ-rO-4qS" id="QA2-Fk-3EV"/>
                                             <outlet property="likesNumberLbl" destination="TfW-Hd-xf1" id="3mA-oh-mQM"/>
