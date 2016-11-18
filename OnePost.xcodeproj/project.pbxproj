@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B0B92131DD4EA9600C5E93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B92121DD4EA9600C5E93E /* AppDelegate.swift */; };
-		1B0B92151DD4EA9600C5E93E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B92141DD4EA9600C5E93E /* ViewController.swift */; };
+		1B0B92151DD4EA9600C5E93E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B92141DD4EA9600C5E93E /* MainVC.swift */; };
 		1B0B92181DD4EA9600C5E93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B92161DD4EA9600C5E93E /* Main.storyboard */; };
 		1B0B921A1DD4EA9600C5E93E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B92191DD4EA9600C5E93E /* Assets.xcassets */; };
 		1B0B921D1DD4EA9600C5E93E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B921B1DD4EA9600C5E93E /* LaunchScreen.storyboard */; };
@@ -16,20 +16,41 @@
 		1B0B92271DD4EAE300C5E93E /* Exo2-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B92261DD4EAE300C5E93E /* Exo2-Thin.ttf */; };
 		1B0B92291DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B92281DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf */; };
 		1B0B922B1DD4EAF700C5E93E /* Exo2-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B922A1DD4EAF700C5E93E /* Exo2-Light.ttf */; };
+		1B4F56EC1DDE5DF8006D220B /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4F56EB1DDE5DF8006D220B /* MaterialView.swift */; };
+		1B72F7581DD7ADBF0020E739 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B72F7571DD7ADBF0020E739 /* GoogleService-Info.plist */; };
+		1B7D4ABB1DDB871F00695A3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D4ABA1DDB871F00695A3A /* Constants.swift */; };
+		1B7D4ABD1DDB8A5500695A3A /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D4ABC1DDB8A5500695A3A /* FeedVC.swift */; };
+		1B7D4ABF1DDD220D00695A3A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D4ABE1DDD220D00695A3A /* PostCell.swift */; };
+		1B7D4AC21DDE243200695A3A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D4AC11DDE243200695A3A /* DataService.swift */; };
+		1BF35A5D1DDE41FD00C721F5 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF35A5C1DDE41FD00C721F5 /* CreatePostVC.swift */; };
+		1BF35A5F1DDE477900C721F5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF35A5E1DDE477900C721F5 /* Post.swift */; };
+		DB5B89BD04EA3E5DEFE0BB7C /* Pods_OnePost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D531DC1FA0698757FEDB593F /* Pods_OnePost.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B0B920F1DD4EA9600C5E93E /* OnePost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnePost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0B92121DD4EA9600C5E93E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1B0B92141DD4EA9600C5E93E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1B0B92141DD4EA9600C5E93E /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		1B0B92171DD4EA9600C5E93E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B0B92191DD4EA9600C5E93E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B0B921C1DD4EA9600C5E93E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B0B921E1DD4EA9600C5E93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B0B92241DD4EAC800C5E93E /* ContrailOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ContrailOne-Regular.ttf"; sourceTree = "<group>"; };
-		1B0B92261DD4EAE300C5E93E /* Exo2-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Thin.ttf"; sourceTree = "<group>"; };
-		1B0B92281DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-MediumItalic.ttf"; sourceTree = "<group>"; };
-		1B0B922A1DD4EAF700C5E93E /* Exo2-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Light.ttf"; sourceTree = "<group>"; };
+		1B0B92241DD4EAC800C5E93E /* ContrailOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ContrailOne-Regular.ttf"; path = "OnePost/ContrailOne-Regular.ttf"; sourceTree = "<group>"; };
+		1B0B92261DD4EAE300C5E93E /* Exo2-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Thin.ttf"; path = "OnePost/Exo2-Thin.ttf"; sourceTree = "<group>"; };
+		1B0B92281DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-MediumItalic.ttf"; path = "OnePost/Exo2-MediumItalic.ttf"; sourceTree = "<group>"; };
+		1B0B922A1DD4EAF700C5E93E /* Exo2-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Light.ttf"; path = "OnePost/Exo2-Light.ttf"; sourceTree = "<group>"; };
+		1B4F56EB1DDE5DF8006D220B /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		1B72F7571DD7ADBF0020E739 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1B7D4ABA1DDB871F00695A3A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1B7D4ABC1DDB8A5500695A3A /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		1B7D4ABE1DDD220D00695A3A /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		1B7D4AC11DDE243200695A3A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		1BB5B44C1DDB78F300409015 /* OnePost.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnePost.entitlements; sourceTree = "<group>"; };
+		1BF35A5C1DDE41FD00C721F5 /* CreatePostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
+		1BF35A5E1DDE477900C721F5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		219A697702848073B9FF8C82 /* Pods-OnePost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnePost.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnePost/Pods-OnePost.release.xcconfig"; sourceTree = "<group>"; };
+		D531DC1FA0698757FEDB593F /* Pods_OnePost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnePost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF095D0EF7FD95CE946ABEA9 /* Pods-OnePost.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnePost.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnePost/Pods-OnePost.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5B89BD04EA3E5DEFE0BB7C /* Pods_OnePost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +70,8 @@
 			children = (
 				1B0B92111DD4EA9600C5E93E /* OnePost */,
 				1B0B92101DD4EA9600C5E93E /* Products */,
+				B3DF2FC4946E210E62C7D7B9 /* Pods */,
+				DC6E7BDB66E99CE881269014 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,18 +86,93 @@
 		1B0B92111DD4EA9600C5E93E /* OnePost */ = {
 			isa = PBXGroup;
 			children = (
-				1B0B92241DD4EAC800C5E93E /* ContrailOne-Regular.ttf */,
-				1B0B92261DD4EAE300C5E93E /* Exo2-Thin.ttf */,
-				1B0B922A1DD4EAF700C5E93E /* Exo2-Light.ttf */,
-				1B0B92281DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf */,
+				1B7D4AC01DDE241500695A3A /* Services */,
+				1B7D4AB91DDB870D00695A3A /* Utils */,
+				1BB5B44C1DDB78F300409015 /* OnePost.entitlements */,
+				1B72F75B1DD7BD460020E739 /* Controller */,
+				1B72F7591DD7BD3A0020E739 /* Model */,
+				1B72F75A1DD7BD410020E739 /* View */,
+				1B72F75C1DD7BD590020E739 /* Fonts */,
 				1B0B92121DD4EA9600C5E93E /* AppDelegate.swift */,
-				1B0B92141DD4EA9600C5E93E /* ViewController.swift */,
 				1B0B92161DD4EA9600C5E93E /* Main.storyboard */,
+				1B72F7571DD7ADBF0020E739 /* GoogleService-Info.plist */,
 				1B0B92191DD4EA9600C5E93E /* Assets.xcassets */,
 				1B0B921B1DD4EA9600C5E93E /* LaunchScreen.storyboard */,
 				1B0B921E1DD4EA9600C5E93E /* Info.plist */,
 			);
 			path = OnePost;
+			sourceTree = "<group>";
+		};
+		1B72F7591DD7BD3A0020E739 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1BF35A5E1DDE477900C721F5 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1B72F75A1DD7BD410020E739 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B7D4ABE1DDD220D00695A3A /* PostCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1B72F75B1DD7BD460020E739 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B0B92141DD4EA9600C5E93E /* MainVC.swift */,
+				1B7D4ABC1DDB8A5500695A3A /* FeedVC.swift */,
+				1BF35A5C1DDE41FD00C721F5 /* CreatePostVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1B72F75C1DD7BD590020E739 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1B0B92241DD4EAC800C5E93E /* ContrailOne-Regular.ttf */,
+				1B0B92261DD4EAE300C5E93E /* Exo2-Thin.ttf */,
+				1B0B922A1DD4EAF700C5E93E /* Exo2-Light.ttf */,
+				1B0B92281DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf */,
+			);
+			name = Fonts;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		1B7D4AB91DDB870D00695A3A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1B7D4ABA1DDB871F00695A3A /* Constants.swift */,
+				1B4F56EB1DDE5DF8006D220B /* MaterialView.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		1B7D4AC01DDE241500695A3A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1B7D4AC11DDE243200695A3A /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		B3DF2FC4946E210E62C7D7B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF095D0EF7FD95CE946ABEA9 /* Pods-OnePost.debug.xcconfig */,
+				219A697702848073B9FF8C82 /* Pods-OnePost.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC6E7BDB66E99CE881269014 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D531DC1FA0698757FEDB593F /* Pods_OnePost.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B0B92211DD4EA9600C5E93E /* Build configuration list for PBXNativeTarget "OnePost" */;
 			buildPhases = (
+				623751038B3E17E27A9C19D2 /* [CP] Check Pods Manifest.lock */,
 				1B0B920B1DD4EA9600C5E93E /* Sources */,
 				1B0B920C1DD4EA9600C5E93E /* Frameworks */,
 				1B0B920D1DD4EA9600C5E93E /* Resources */,
+				F16AFC9279419FB5DF535789 /* [CP] Embed Pods Frameworks */,
+				6C49832F8EAD4FCDA36BC280 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -109,7 +211,13 @@
 					1B0B920E1DD4EA9600C5E93E = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = UMQAGMF379;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -143,18 +251,74 @@
 				1B0B92291DD4EAEC00C5E93E /* Exo2-MediumItalic.ttf in Resources */,
 				1B0B921A1DD4EA9600C5E93E /* Assets.xcassets in Resources */,
 				1B0B92181DD4EA9600C5E93E /* Main.storyboard in Resources */,
+				1B72F7581DD7ADBF0020E739 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		623751038B3E17E27A9C19D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6C49832F8EAD4FCDA36BC280 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnePost/Pods-OnePost-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F16AFC9279419FB5DF535789 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnePost/Pods-OnePost-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B0B920B1DD4EA9600C5E93E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B0B92151DD4EA9600C5E93E /* ViewController.swift in Sources */,
+				1B7D4ABD1DDB8A5500695A3A /* FeedVC.swift in Sources */,
+				1BF35A5D1DDE41FD00C721F5 /* CreatePostVC.swift in Sources */,
+				1B0B92151DD4EA9600C5E93E /* MainVC.swift in Sources */,
+				1B4F56EC1DDE5DF8006D220B /* MaterialView.swift in Sources */,
+				1BF35A5F1DDE477900C721F5 /* Post.swift in Sources */,
 				1B0B92131DD4EA9600C5E93E /* AppDelegate.swift in Sources */,
+				1B7D4AC21DDE243200695A3A /* DataService.swift in Sources */,
+				1B7D4ABB1DDB871F00695A3A /* Constants.swift in Sources */,
+				1B7D4ABF1DDD220D00695A3A /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,8 +439,10 @@
 		};
 		1B0B92221DD4EA9600C5E93E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF095D0EF7FD95CE946ABEA9 /* Pods-OnePost.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OnePost/OnePost.entitlements;
 				DEVELOPMENT_TEAM = UMQAGMF379;
 				INFOPLIST_FILE = OnePost/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -288,8 +454,10 @@
 		};
 		1B0B92231DD4EA9600C5E93E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 219A697702848073B9FF8C82 /* Pods-OnePost.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OnePost/OnePost.entitlements;
 				DEVELOPMENT_TEAM = UMQAGMF379;
 				INFOPLIST_FILE = OnePost/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -318,6 +486,7 @@
 				1B0B92231DD4EA9600C5E93E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
