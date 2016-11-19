@@ -38,6 +38,12 @@ class Post {
     
     var comments:String {
         
+        if _comments == nil {
+            
+            _comments = "no comments as yet"
+            
+        }
+        
         return _comments
         
     }
@@ -60,12 +66,13 @@ class Post {
   
     }
     
-    init(caption: String, imageUrl: String, likes: Int, username: String) {
+    init(caption: String, imageUrl: String, likes: Int, username: String, comments: String) {
         
         self._username = username
         self._caption = caption
         self._imageUrl = imageUrl
         self._likes = likes
+        self._comments = comments
         
         
     }
@@ -95,6 +102,12 @@ class Post {
         if let comments = postData["comments"] as? String {
             
             self._comments = comments
+            
+        }
+        
+        if let username = postData["username"] as? String {
+            
+            self._username = username
             
         }
         

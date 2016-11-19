@@ -21,6 +21,7 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var makePostImg: UIImageView!
     @IBOutlet weak var caption: UITextView!
     @IBOutlet weak var likesNumberLbl: UILabel!
+    @IBOutlet weak var commentsLbl: UILabel!
     
     var post: Post!
     
@@ -36,6 +37,7 @@ class PostCell: UITableViewCell {
         self.caption.text = post.caption
         self.likesNumberLbl.text = "\(post.likes)"
         self.usernameLbl.text = post.username
+        self.commentsLbl.text = post.comments
    
     }
 

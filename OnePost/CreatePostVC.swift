@@ -21,11 +21,7 @@ class CreatePostVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
-        
-        
-        
+  
         
     }
 
@@ -34,6 +30,15 @@ class CreatePostVC: UIViewController {
         
         
         
+        
+        
+    }
+    
+    
+    @IBAction func cancelBtnPressed(_ sender: Any) {
+        
+        
+        dismiss(animated: true, completion: nil)
         
         
     }

@@ -37,6 +37,19 @@ class DataService {
         
     }
     
+    var REF_CURRENT_USER: FIRDatabaseReference {
+        
+        let user = _REF_USERS.child("username")
+        
+        return user
+        
+    }
+    
+    
+    
+    
+    
+    
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>) {
         
         REF_USERS.child(uid).updateChildValues(userData)
