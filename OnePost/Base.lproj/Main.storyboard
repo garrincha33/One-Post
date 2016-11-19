@@ -509,11 +509,15 @@
                                     <action selector="postBtnPressed:" destination="lYd-3r-xYg" eventType="touchUpInside" id="23w-1e-03V"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="V0z-qv-rHO">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="V0z-qv-rHO">
                                 <rect key="frame" x="142" y="146" width="129" height="85"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="OoY-P9-jri"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WSo-3d-X4Q" appends="YES" id="f26-ZA-JFO"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -543,6 +547,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CkY-XN-Dhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WSo-3d-X4Q">
+                    <connections>
+                        <action selector="addImgTapped:" destination="lYd-3r-xYg" id="XOw-u2-RmA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="545" y="-78"/>
         </scene>
