@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -19,6 +20,8 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBOutlet weak var addImg: UIImageView!
     
     var imagePicker: UIImagePickerController!
+    
+    var imageSelected = false
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,21 +29,49 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
-        
-
+  
     }
 
     @IBAction func postBtnPressed(_ sender: Any) {
         
-    
-    }
-    func postToFirebase() {
+        guard let makePostTxtField = makePost.text, !makePostTxtField.isEmpty else {
+            
+            print("Please enter a post")
+            return
+        }
         
-     
+        guard let img = addImg.image, imageSelected == true else {
+            
+            print("no image has been selected")
+            return
+            
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 2.0) {
+            
+        let imgUid = NSUUID().uuidString
+        let metadata = FIRStorageMetadata()
+        metadata.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imgUid).put(imgData, metadata: metadata) { (metadata, error) in
+                
+                if error != nil  {
+                    
+                    print("RICH: Unable to upload images to firebase Storage")
+                    
+                } else {
+                    print("RICH: succesfully uploaded to Firebase Storage")
+                    
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                    
+                }
+   
+            }
+            
+        }
+    
     }
-    
-    
-    
+
     @IBAction func cancelBtnPressed(_ sender: Any) {
      
         dismiss(animated: true, completion: nil)
@@ -52,6 +83,7 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             
             addImg.image = image
+            imageSelected = true
             
             
         } else {
@@ -68,8 +100,5 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         present(imagePicker, animated: true, completion: nil)
         
     }
-    
-   
-
 
 }
