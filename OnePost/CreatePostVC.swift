@@ -32,12 +32,13 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
 
     @IBAction func postBtnPressed(_ sender: Any) {
         
-        
-        
-        
-        
-        
+    
     }
+    func postToFirebase() {
+        
+     
+    }
+    
     
     
     @IBAction func cancelBtnPressed(_ sender: Any) {

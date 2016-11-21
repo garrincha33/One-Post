@@ -32,6 +32,12 @@ class Post {
     
     var likes: Int {
         
+        if _likes == nil {
+            
+        _likes = 777
+            
+        }
+        
         return _likes
         
     }
@@ -87,7 +93,7 @@ class Post {
             
         }
         
-        if let imageUrl = postData["imageUrl"] as? String {
+        if let imageUrl = postData["imageURL"] as? String {
             
             self._imageUrl = imageUrl
             
