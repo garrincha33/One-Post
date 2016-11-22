@@ -20,7 +20,6 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBOutlet weak var addImg: UIImageView!
     
     var imagePicker: UIImagePickerController!
-    
     var imageSelected = false
  
     override func viewDidLoad() {
@@ -64,12 +63,32 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                     
                     let downloadURL = metadata?.downloadURL()?.absoluteString
                     
+                    if let url = downloadURL {
+                        
+                        self.postToFirebase(imgUrl: url)
+                    }
+ 
                 }
    
             }
             
         }
     
+    }
+    
+    func postToFirebase(imgUrl: String) {
+        let post: Dictionary<String, Any> = [
+            "caption": makePost.text! as String,
+            "imageURL": imgUrl as String,
+            "likes": 0 as Int
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        makePost.text = ""
+        imageSelected = false
+        addImg.image = UIImage(named: "add-image")
     }
 
     @IBAction func cancelBtnPressed(_ sender: Any) {

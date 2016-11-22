@@ -20,11 +20,23 @@ class Post {
     
     var caption: String {
         
+        if _caption == nil {
+            
+            _caption = "could not find a caption"
+            
+        }
+        
         return _caption
         
     }
     
     var imageUrl: String {
+        
+        if _imageUrl == nil {
+            
+            _imageUrl = "could not find an image"
+            
+        }
         
         return _imageUrl
         

@@ -10,3 +10,4 @@ import UIKit
 
 let KEY_UID = "uid"
 let POST_CELL = "postCell"
+let COMMENT_CELL = "CommentCell"
