@@ -509,7 +509,7 @@
                                     <action selector="postBtnPressed:" destination="lYd-3r-xYg" eventType="touchUpInside" id="23w-1e-03V"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="V0z-qv-rHO">
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="V0z-qv-rHO">
                                 <rect key="frame" x="142" y="146" width="129" height="85"/>
                                 <gestureRecognizers/>
                                 <constraints>

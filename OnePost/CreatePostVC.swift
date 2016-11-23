@@ -54,6 +54,8 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
             
             DataService.ds.REF_POST_IMAGES.child(imgUid).put(imgData, metadata: metadata) { (metadata, error) in
                 
+            
+                
                 if error != nil  {
                     
                     print("RICH: Unable to upload images to firebase Storage")
@@ -77,7 +79,9 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     }
     
     func postToFirebase(imgUrl: String) {
+        
         let post: Dictionary<String, Any> = [
+            
             "caption": makePost.text! as String,
             "imageURL": imgUrl as String,
             "likes": 0 as Int
