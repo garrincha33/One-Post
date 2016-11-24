@@ -26,9 +26,6 @@ class PostCell: UITableViewCell {
     
     var post: Post!
     var likesRef: FIRDatabaseReference!
-    var currentUser: FIRDatabaseReference!
-    var printUser = ""
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,22 +42,6 @@ class PostCell: UITableViewCell {
         self.post = post
         
         likesRef = DataService.ds.REF_CURRENT_USER.child("likes").child(post.postKey)
-        
-        //get current user-----------        
-        currentUser = DataService.ds.REF_CURRENT_USER
-        
-        currentUser.observeSingleEvent(of: .value, with: {(snapshot) in
-            
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-                
-                self.printUser = (dictionary["username"] as? String)!
-                
-                print("your user is \(self.printUser)")
-            }
-            
-        })
-        //-----------------------------------
-        
         self.caption.text = post.caption
         self.likesNumberLbl.text = "\(post.likes)"
         self.usernameLbl.text = post.username
@@ -83,7 +64,7 @@ class PostCell: UITableViewCell {
                     
                 } else {
                     
-                    print("Rich: image downloaded from firebase storage \(self.printUser)")
+                    print("Rich: image downloaded from firebase storage")
                     
                     
                     if let imgData = data {

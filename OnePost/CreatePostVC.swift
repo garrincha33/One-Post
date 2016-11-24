@@ -21,7 +21,10 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     var imagePicker: UIImagePickerController!
     var imageSelected = false
+    //get current user-------
+    var currentUser: FIRDatabaseReference!
     var printUser = ""
+    //----------------
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +77,21 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
             }
             
         }
-    
+        
+        //get current user-----------
+        currentUser = DataService.ds.REF_CURRENT_USER
+        
+        currentUser.observeSingleEvent(of: .value, with: {(snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                
+                self.printUser = (dictionary["username"] as? String)!
+                
+                print("your user is \(self.printUser)")
+            }
+            
+        })
+        //-----------------------------------
     }
     
     func postToFirebase(imgUrl: String) {
@@ -83,7 +100,8 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
             
             "caption": makePost.text! as String,
             "imageURL": imgUrl as String,
-            "likes": 0 as Int
+            "likes": 0 as Int,
+            "username" : printUser as String
         ]
         
         let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
