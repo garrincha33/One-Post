@@ -14,7 +14,6 @@ class Post {
     private var _caption: String!
     private var _imageUrl: String!
     private var _likes: Int!
-    private var _numberOfComments: Int!
     private var _comments: String!
     private var _postKey: String!
     private var _username: String!
@@ -38,9 +37,11 @@ class Post {
         if _imageUrl == nil {
             
             _imageUrl = "could not find an image"
+            
         }
         
         return _imageUrl
+        
     }
     
     var likes: Int {
@@ -52,16 +53,7 @@ class Post {
         }
         
         return _likes
-    }
-    
-    var numberOfComments: Int {
         
-        if _numberOfComments == nil {
-            
-            _numberOfComments = 0
-        }
-        
-        return _numberOfComments
     }
     
     var comments:String {
@@ -69,14 +61,17 @@ class Post {
         if _comments == nil {
             
             _comments = "no comments as yet"
+            
         }
         
         return _comments
+        
     }
     
     var postKey: String {
         
         return _postKey
+        
     }
     
     var username: String {
@@ -84,6 +79,7 @@ class Post {
         if _username == nil {
             
             _username = "no data"
+            
         }
         
         return _username
@@ -97,7 +93,8 @@ class Post {
         self._imageUrl = imageUrl
         self._likes = likes
         self._comments = comments
-
+        
+        
     }
     
     init(postKey: String, postData: Dictionary<String, AnyObject>) {
@@ -107,27 +104,33 @@ class Post {
         if let caption = postData["caption"] as? String {
             
             self._caption = caption
+            
         }
         
         if let imageUrl = postData["imageURL"] as? String {
             
             self._imageUrl = imageUrl
+            
         }
         
         if let likes = postData["likes"] as? Int {
             
             self._likes = likes
+            
         }
         
         if let comments = postData["comments"] as? String {
             
             self._comments = comments
+            
         }
         
         if let username = postData["username"] as? String {
             
             self._username = username
+            
         }
+        
         _postRef = DataService.ds.REF_POSTS.child(_postKey)
  
     }
@@ -137,11 +140,14 @@ class Post {
         if addLike {
             
             _likes = _likes + 1
-
+            
+            
         } else {
             
             _likes = _likes - 1
+            
         }
+  
         _postRef.child("likes").setValue(_likes)
   
     }

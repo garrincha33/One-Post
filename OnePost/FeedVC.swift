@@ -49,6 +49,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             self.tableView.reloadData()
 
         })
+        
+        
 
     }
     
@@ -76,7 +78,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             return PostCell()
             
         }
- 
+        
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
