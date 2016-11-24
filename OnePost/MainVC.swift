@@ -35,7 +35,7 @@ class MainVC: UIViewController {
         }
     }
     
-    //------FOR FIREBASE IMPLEMENTATION
+    
 //    func firebaseAuth(_ credential: FIRAuthCredential) {
 //        
 //        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
@@ -61,10 +61,10 @@ class MainVC: UIViewController {
 //        })
 //        
 //    }
-    
+//    
   
     @IBAction func loginBtn(_ sender: AnyObject) {
-        
+      
         guard let email = usernameLoginTxtField.text, !email.isEmpty else {
             
             print("The email field needs to be populated")
@@ -75,7 +75,7 @@ class MainVC: UIViewController {
             print("The password field needs to be populated")
             return
         }
-        
+
         FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
             
             if error == nil {
@@ -86,38 +86,35 @@ class MainVC: UIViewController {
                     
                     let userData = ["provider" : user.providerID]
                     self.completeSignIn(id: user.uid, userData: userData)
-                }
-                
-            } else {
-                
-                print("did we get here")
-                
-                FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                     
-                    if error != nil {
+                } else {
+                    
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         
-                        print("Rich: unable to authenticate with firebase \(error.debugDescription)")
-                        
-                    } else {
-                        
-                        print("RICH: successfully authenticated and added user to firebase....")
-                        
-                        if let user = user {
+                        if error != nil {
                             
-                            let userData = ["provider" : user.providerID]
-                            self.completeSignIn(id: user.uid, userData: userData)
+                            print("Rich: unable to authenticate with firebase \(error.debugDescription)")
                             
+                        } else {
+                            
+                            print("RICH: successfully authenticated and added user to firebase....")
+                            
+                            if let user = user {
+                                
+                                let userData = ["provider" : user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
+                                
+                            }
                         }
-                    }
+ 
+                    })
                     
-                })
-                
+                }
+
             }
-            
         })
         
     }
-
     
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
         

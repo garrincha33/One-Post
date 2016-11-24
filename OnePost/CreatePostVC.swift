@@ -53,9 +53,7 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         metadata.contentType = "image/jpeg"
             
             DataService.ds.REF_POST_IMAGES.child(imgUid).put(imgData, metadata: metadata) { (metadata, error) in
-                
-            
-                
+
                 if error != nil  {
                     
                     print("RICH: Unable to upload images to firebase Storage")

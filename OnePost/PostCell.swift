@@ -27,6 +27,8 @@ class PostCell: UITableViewCell {
     var post: Post!
     var likesRef: FIRDatabaseReference!
     
+    let currentUser = DataService.ds .REF_CURRENT_USER.child("username")
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -64,6 +66,7 @@ class PostCell: UITableViewCell {
                 } else {
                     
                     print("Rich: image downloaded from firebase storage")
+                    //print("CURRENT USER:\(self.currentUser)")
                     
                     if let imgData = data {
                         
