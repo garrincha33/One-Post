@@ -23,6 +23,8 @@
 		1B7D4ABF1DDD220D00695A3A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D4ABE1DDD220D00695A3A /* PostCell.swift */; };
 		1B7D4AC21DDE243200695A3A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D4AC11DDE243200695A3A /* DataService.swift */; };
 		1BE312C51DE783A900EBF5E1 /* PasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE312C41DE783A900EBF5E1 /* PasswordVC.swift */; };
+		1BE312C71DE7909600EBF5E1 /* CreateUsernameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE312C61DE7909600EBF5E1 /* CreateUsernameVC.swift */; };
+		1BE312CA1DEAFE7D00EBF5E1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE312C91DEAFE7D00EBF5E1 /* Helper.swift */; };
 		1BF35A5D1DDE41FD00C721F5 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF35A5C1DDE41FD00C721F5 /* CreatePostVC.swift */; };
 		1BF35A5F1DDE477900C721F5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF35A5E1DDE477900C721F5 /* Post.swift */; };
 		DB5B89BD04EA3E5DEFE0BB7C /* Pods_OnePost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D531DC1FA0698757FEDB593F /* Pods_OnePost.framework */; };
@@ -48,6 +50,8 @@
 		1B7D4AC11DDE243200695A3A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		1BB5B44C1DDB78F300409015 /* OnePost.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnePost.entitlements; sourceTree = "<group>"; };
 		1BE312C41DE783A900EBF5E1 /* PasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordVC.swift; sourceTree = "<group>"; };
+		1BE312C61DE7909600EBF5E1 /* CreateUsernameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameVC.swift; sourceTree = "<group>"; };
+		1BE312C91DEAFE7D00EBF5E1 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		1BF35A5C1DDE41FD00C721F5 /* CreatePostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
 		1BF35A5E1DDE477900C721F5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		219A697702848073B9FF8C82 /* Pods-OnePost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnePost.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnePost/Pods-OnePost.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		1B0B92111DD4EA9600C5E93E /* OnePost */ = {
 			isa = PBXGroup;
 			children = (
+				1BE312C81DEAFE6600EBF5E1 /* Helpers */,
 				1B7D4AC01DDE241500695A3A /* Services */,
 				1B7D4AB91DDB870D00695A3A /* Utils */,
 				1BB5B44C1DDB78F300409015 /* OnePost.entitlements */,
@@ -128,6 +133,7 @@
 				1B7D4ABC1DDB8A5500695A3A /* FeedVC.swift */,
 				1BF35A5C1DDE41FD00C721F5 /* CreatePostVC.swift */,
 				1BE312C41DE783A900EBF5E1 /* PasswordVC.swift */,
+				1BE312C61DE7909600EBF5E1 /* CreateUsernameVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -159,6 +165,14 @@
 				1B7D4AC11DDE243200695A3A /* DataService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		1BE312C81DEAFE6600EBF5E1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1BE312C91DEAFE7D00EBF5E1 /* Helper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		B3DF2FC4946E210E62C7D7B9 /* Pods */ = {
@@ -314,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B7D4ABD1DDB8A5500695A3A /* FeedVC.swift in Sources */,
+				1BE312C71DE7909600EBF5E1 /* CreateUsernameVC.swift in Sources */,
 				1BE312C51DE783A900EBF5E1 /* PasswordVC.swift in Sources */,
 				1BF35A5D1DDE41FD00C721F5 /* CreatePostVC.swift in Sources */,
 				1B0B92151DD4EA9600C5E93E /* MainVC.swift in Sources */,
@@ -323,6 +338,7 @@
 				1B7D4AC21DDE243200695A3A /* DataService.swift in Sources */,
 				1B7D4ABB1DDB871F00695A3A /* Constants.swift in Sources */,
 				1B7D4ABF1DDD220D00695A3A /* PostCell.swift in Sources */,
+				1BE312CA1DEAFE7D00EBF5E1 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

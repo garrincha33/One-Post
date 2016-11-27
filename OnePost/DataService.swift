@@ -49,7 +49,7 @@ class DataService {
         return user
         
     }
-    
+  
     var REF_POST_IMAGES: FIRStorageReference {
         
         return _REF_POST_IMAGES
@@ -62,6 +62,5 @@ class DataService {
         REF_USERS.child(uid).updateChildValues(userData)
         
     }
-    
-
+  
 }
