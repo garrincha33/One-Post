@@ -125,7 +125,7 @@ class MainVC: UIViewController {
 
         let keychainResult = KeychainWrapper.defaultKeychainWrapper().setString(id, forKey: KEY_UID)
         print("Rich: Data Saved to Keychain \(keychainResult)")
-        performSegue(withIdentifier: "goToFeed", sender: nil)
+        performSegue(withIdentifier: USERNAME_VC, sender: nil)
         usernameLoginTxtField.text = ""
         passwwordLoginTxtField.text = ""
         

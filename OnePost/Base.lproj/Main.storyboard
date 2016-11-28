@@ -51,7 +51,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCE-Jk-3v2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter a username....." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCE-Jk-3v2">
                                 <rect key="frame" x="50" y="342" width="275" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Hal-tv-kRk"/>
@@ -60,28 +60,48 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d22-Ww-lgV">
+                                <rect key="frame" x="130" y="418" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="submitUsernamePressed:" destination="Og3-RB-pgU" eventType="touchUpInside" id="31i-qd-6wH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="fHb-36-3rZ">
+                                <rect key="frame" x="125" y="41" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="OZZ-na-REs"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Dxg-HW-FB4" firstAttribute="top" secondItem="KTk-4P-d0T" secondAttribute="bottom" constant="154" id="FPb-Dl-UAE"/>
                             <constraint firstItem="1af-d6-Xzn" firstAttribute="trailing" secondItem="Xw3-IK-4FX" secondAttribute="trailingMargin" id="JUF-hD-i72"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fHb-36-3rZ" secondAttribute="trailing" constant="109" id="JVM-I0-5Oh"/>
                             <constraint firstItem="VaH-j9-z2i" firstAttribute="top" secondItem="Xw3-IK-4FX" secondAttribute="top" id="XfQ-Ai-Xeb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gCE-Jk-3v2" secondAttribute="trailing" constant="34" id="awU-q0-Li4"/>
                             <constraint firstItem="Dxg-HW-FB4" firstAttribute="leading" secondItem="Xw3-IK-4FX" secondAttribute="leading" id="bWR-s1-gPh"/>
+                            <constraint firstItem="fHb-36-3rZ" firstAttribute="top" secondItem="KTk-4P-d0T" secondAttribute="bottom" constant="21" id="ckU-kp-aW7"/>
                             <constraint firstAttribute="trailing" secondItem="Dxg-HW-FB4" secondAttribute="trailing" id="clP-hv-dzo"/>
                             <constraint firstItem="ZfH-5g-y1f" firstAttribute="top" secondItem="VaH-j9-z2i" secondAttribute="bottom" id="fE9-4N-5FE"/>
                             <constraint firstItem="gCE-Jk-3v2" firstAttribute="leading" secondItem="Xw3-IK-4FX" secondAttribute="leadingMargin" constant="34" id="glc-Xd-MvW"/>
                             <constraint firstAttribute="trailing" secondItem="VaH-j9-z2i" secondAttribute="trailing" id="him-y7-LL5"/>
                             <constraint firstItem="1af-d6-Xzn" firstAttribute="leading" secondItem="Xw3-IK-4FX" secondAttribute="leadingMargin" id="o6g-Ep-3HR"/>
+                            <constraint firstItem="fHb-36-3rZ" firstAttribute="leading" secondItem="Xw3-IK-4FX" secondAttribute="leadingMargin" constant="109" id="udB-iV-RJ0"/>
                             <constraint firstItem="VaH-j9-z2i" firstAttribute="leading" secondItem="Xw3-IK-4FX" secondAttribute="leading" id="veH-mn-88G"/>
                             <constraint firstItem="1af-d6-Xzn" firstAttribute="top" secondItem="Dxg-HW-FB4" secondAttribute="bottom" constant="72" id="xJH-2e-IIF"/>
                             <constraint firstItem="gCE-Jk-3v2" firstAttribute="top" secondItem="1af-d6-Xzn" secondAttribute="bottom" constant="8" id="yYa-fA-FjF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="enterUsernameTxtField" destination="gCE-Jk-3v2" id="pUs-ln-Do0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwE-4g-t9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1911.2" y="-74.212893553223395"/>
+            <point key="canvasLocation" x="-1994.4000000000001" y="159.67016491754123"/>
         </scene>
         <!--PasswordVC-->
         <scene sceneID="JYE-66-m6X">
@@ -169,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wv7-AS-VZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1264" y="638"/>
+            <point key="canvasLocation" x="-962" y="622"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -300,16 +320,17 @@
                         <outlet property="passwwordLoginTxtField" destination="GxL-Qp-zRm" id="Wgh-lZ-sUc"/>
                         <outlet property="usernameLoginTxtField" destination="lA2-a5-nfr" id="uis-jb-IXV"/>
                         <segue destination="URn-FF-pW7" kind="show" identifier="goToFeed" id="Lbm-oN-MgL"/>
+                        <segue destination="Og3-RB-pgU" kind="show" identifier="goToUsernameVC" id="wPl-Ei-ehL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-955" y="-78"/>
+            <point key="canvasLocation" x="-999" y="-339"/>
         </scene>
         <!--FeedVC-->
         <scene sceneID="Ifl-NQ-Lzc">
             <objects>
-                <viewController id="URn-FF-pW7" customClass="FeedVC" customModule="OnePost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="URn-FF-pW7" customClass="FeedVC" customModule="OnePost" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IWM-32-2iB"/>
                         <viewControllerLayoutGuide type="bottom" id="dwl-SL-3oM"/>
@@ -591,7 +612,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmc-1j-CZ2">
-                                        <rect key="frame" x="128.5" y="19" width="119" height="28"/>
+                                        <rect key="frame" x="128" y="19" width="119" height="28"/>
                                         <fontDescription key="fontDescription" name="Exo2-Light" family="Exo 2" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>

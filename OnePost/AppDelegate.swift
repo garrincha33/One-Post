@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         FIRApp.configure()
+//        login()
         
         
         return true
@@ -46,6 +47,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+//    func login() {
+//        
+//        if FIRAuth.auth()?.currentUser != nil {
+//            
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let naviVC = storyboard.instantiateViewController(withIdentifier: "FeedVC") as! UINavigationController
+//            window?.rootViewController = naviVC
+//            
+//        }
+//        
+//    }
 
 
 }

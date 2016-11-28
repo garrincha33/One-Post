@@ -62,5 +62,29 @@ class DataService {
         REF_USERS.child(uid).updateChildValues(userData)
         
     }
-  
+    
+    func changeUsername(username: String) {
+        
+        let user = FIRAuth.auth()?.currentUser
+        
+        let changeRequest = user?.profileChangeRequest()
+        
+        changeRequest?.displayName = username
+        
+        changeRequest?.commitChanges(completion: { ( error) in
+            
+            if let error = error {
+                
+                print(error.localizedDescription)
+                return
+                
+            } else {
+
+                //---
+            }
+            
+        })
+   
+    }
+
 }
