@@ -19,7 +19,7 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     @IBOutlet weak var addImg: UIImageView!
   //  let nsDict = dict as! NSDictionary
-    var userDict = NSMutableDictionary as? [String : AnyObject]()
+    var userDict = NSMutableDictionary as? [String : AnyObject]
     
     var imagePicker: UIImagePickerController!
     var imageSelected = false
@@ -59,7 +59,7 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
             
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 self.printUser = (dictionary["username"] as? String)!
-                userDict = dictionary
+                self.userDict = dictionary
                 print("your user is \(self.printUser)")
             }
         })
@@ -82,9 +82,9 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                 if error != nil{
                     print("RICH: Unable to upload images to firebase Storage")
                 }else{
-                    lastPostTime = userDict["lastPostTime"]
+                    lastPostTime = self.userDict["lastPostTime"]
                     presentPostTime = Date()
-                    if userDict["lastPostTime"] != nil
+                    if self.userDict["lastPostTime"] != nil
                     {
                         distanceBwDates=[lastPostTime? .timeIntervalSinceNow]
                         if distanceBwDates>=minSeconds
@@ -95,7 +95,7 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                             lastPostTime = someDateTime
                             let downloadURL = metadata?.downloadURL()?.absoluteString
                             if let url = downloadURL {
-                                userDict["lastPostTime"]=lastPostTime
+                                self.userDict["lastPostTime"]=lastPostTime
                                 self.postToFirebase(imgUrl: url)
                                 print("RICH: succesfully uploaded to Firebase Storage")
                             }
@@ -114,7 +114,7 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                         let downloadURL = metadata?.downloadURL()?.absoluteString
                         if let url = downloadURL
                         {
-                            userDict["lastPostTime"]=lastPostTime
+                            self.userDict["lastPostTime"]=lastPostTime
                             self.postToFirebase(imgUrl: url)
                             print("RICH: succesfully uploaded to Firebase Storage")
                         }
@@ -136,7 +136,7 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
         firebasePost.setValue(post)
-        currentUser.setValue(userDict)
+        currentUser.setValue(self.userDict)
         makePost.text = ""
         imageSelected = false
         addImg.image = UIImage(named: "add-image")
