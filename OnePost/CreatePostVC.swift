@@ -87,12 +87,13 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                 }else
                 {
                     let dateFormatter = DateFormatter()
-                    dateFormatter.dateFormat = "dd MMM yyy hh:mm"
+                    dateFormatter.dateFormat = "dd MMM yyy HH:mm"
                     let name = self.userDict["lastPostTime"] as? String
-                    lastPostTime = dateFormatter.date(from:name!)!
+                    
                     presentPostTime = Date()
                     if self.userDict["lastPostTime"] != nil
                     {
+lastPostTime = dateFormatter.date(from:name!)!
                        let interval = presentPostTime.timeIntervalSince(lastPostTime)
                         let i = Int(interval)
 
